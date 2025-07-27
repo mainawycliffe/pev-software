@@ -1,10 +1,10 @@
-type Props = {
+type SearchBarProps = {
   value: string;
   onChange: (value: string) => void;
   ariaLabel?: string;
 };
 
-export function SearchBar({ value, onChange, ariaLabel }: Props) {
+export function SearchBar({ value, onChange, ariaLabel }: SearchBarProps) {
   return (
     <input
       className='w-full p-2 border rounded mb-2 bg-[#1a2a4f] text-[#d1a100] placeholder:text-[#d1a2a4f] focus:outline-none focus:ring-2 focus:ring-[#d1a100]'

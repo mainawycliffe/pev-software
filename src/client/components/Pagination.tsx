@@ -1,12 +1,10 @@
-export function Pagination({
-  page,
-  totalPages,
-  onPage,
-}: {
+type PaginationProps = {
   page: number;
   totalPages: number;
   onPage: (p: number) => void;
-}) {
+};
+
+export function Pagination({ page, totalPages, onPage }: PaginationProps) {
   return (
     <nav className='flex justify-center items-center gap-4 mt-4' aria-label='Pagination'>
       <button

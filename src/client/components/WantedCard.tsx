@@ -1,6 +1,10 @@
 import type { WantedPerson } from '../../types/wanted.zod';
 
-export function WantedCard({ person }: { person: WantedPerson }) {
+type WantedCardProps = {
+  person: WantedPerson;
+};
+
+export function WantedCard({ person }: WantedCardProps) {
   return (
     <div className='bg-[#0a1f44] border-2 border-[#d1a100] rounded-xl shadow-lg p-4 flex flex-col items-center justify-between min-h-[400px] w-full mx-auto transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:z-10 hover:border-4 hover:border-[#ffd700] focus-within:border-4 focus-within:border-[#ffd700] cursor-pointer'>
       <div className='w-full h-[264px] bg-[#1a2a4f] flex items-center justify-center overflow-hidden rounded mb-2'>

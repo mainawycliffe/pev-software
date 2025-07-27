@@ -1,12 +1,12 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
-import type { WantedPerson } from '../../types/wanted';
+import { WantedPerson } from '../../types/wanted.zod';
 
-interface WantedDetailModalProps {
+type WantedDetailModalProps = {
   open: boolean;
   onClose: () => void;
   person: WantedPerson | null;
-}
+};
 
 export default function WantedDetailModal({ open, onClose, person }: WantedDetailModalProps) {
   if (!person) return null;
