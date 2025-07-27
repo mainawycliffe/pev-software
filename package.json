@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon -w src/server -x tsx src/server/main.ts",
     "start": "NODE_ENV=production tsx src/server/main.ts",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "vitest run --environment jsdom"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.6",
