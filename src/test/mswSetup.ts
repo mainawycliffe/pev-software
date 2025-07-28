@@ -1,6 +1,7 @@
 import { http } from 'msw';
 import { setupServer } from 'msw/node';
 
+// setup request mocking, using Mock Service Worker for testing
 // MSW v2+ handlers using http.get and Response.json
 export const handlers = [
   http.get('/api/wanted', () => {

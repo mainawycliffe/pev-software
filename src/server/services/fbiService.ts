@@ -1,4 +1,5 @@
 import { createCache } from 'cache-manager';
+import { WantedListResponse } from '../../types/wanted.zod';
 
 // Set cache TTL to 30 minutes (1800 seconds)
 const CACHE_TTL_SECONDS = 1800;
@@ -6,22 +7,6 @@ const cache = createCache({ ttl: CACHE_TTL_SECONDS });
 
 // Base URL for FBI Wanted API
 const FBI_API_BASE = 'https://api.fbi.gov/wanted/v1';
-
-export type WantedPerson = {
-  uid: string;
-  title: string;
-  description?: string;
-  field_offices?: string[];
-  images?: Array<{ large?: string; thumb?: string; caption?: string }>;
-};
-
-export type WantedListResponse = {
-  items: WantedPerson[];
-  total: number;
-  page: number;
-  pageSize: number;
-  totalPages: number;
-};
 
 export type WantedListFilters = {
   search?: string;

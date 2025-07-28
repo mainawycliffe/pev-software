@@ -1,6 +1,7 @@
 import nock from 'nock';
 import { afterEach, describe, expect, it } from 'vitest';
-import { getWantedList, WantedListResponse } from './fbiService.js';
+import { WantedListResponse } from '../../../types/wanted.zod.js';
+import { getWantedList } from '../fbiService.js';
 
 const FBI_API_BASE = 'https://api.fbi.gov';
 
